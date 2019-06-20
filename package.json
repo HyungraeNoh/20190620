@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/HyungraeNoh/20190620/issues"
   },
-  "homepage": "https://github.com/HyungraeNoh/20190620#readme"
+  "homepage": "https://github.com/HyungraeNoh/20190620#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pm2": "^3.5.1"
+  }
 }
