@@ -1,0 +1,329 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+header{
+    background-color: #f4511e;
+    color: white;
+    height: 300px;
+}
+
+footer{
+    background-color: white;
+    color: #818181;
+    height: 150px;
+    text-align: center;
+}
+footer p{
+    padding-top: 70px;
+}
+ul li{
+    display: inline-block;
+    float: left;
+    position: relative;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+ul li.l5:hover, ul li.l6:hover{
+    color: #f4511e;
+    background-color: white;
+}
+
+ul li.l5 a:hover, ul li.l6 a:hover{
+    color: #f4511e;
+
+}
+/*
+ul li.l5 a:link, ul li.l6 a{}*/
+ul li.l5 a:visited, ul li.l6 a{color: white;}
+
+a.a1{
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+a.a2{
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.l{
+    display: inline-block;
+    float: right;
+    position: relative;
+    height: 30px;
+}
+.tb_style{
+  width: 300px;
+  height: 20px;
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  right: -10px
+}
+.btn_style{
+  font-family: Montserrat, sans-serif;
+  border-radius: 4px;
+  font-size: 14px;
+  color: white;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  border: 1px solid #00000000;
+  padding: 6px 12px;
+}
+nav .out_container_nav{
+    width: 60%;
+    height: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 1.42857143;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+.out_container_h1{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 63px;
+    padding-top: 60px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+}
+.out_container_p1{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 21px;
+    font-weight: lighter;
+    line-height: 37.8px;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+.out_container_p2{
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 1rem;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+.a_l{
+    float: left;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.a_r{
+    float: right;
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+section iframe{
+    width : 100%;
+}
+section iframe.if_about{
+    height: 1200px;
+}
+section iframe.if_services{
+    height: 650px;
+}
+section iframe.if_portfolio{
+    height: 910px;
+}
+section iframe.if_pricing{
+    height: 820px;
+}
+section iframe.if_contact{
+    height: 1020px;
+}
+
+/* 수정  */
+@media only screen and (min-width:1200px) {
+    .l4{
+         height: 40px;
+         margin-left: calc(20% - 20px);
+         padding: 12.5px 10px 5px 10px;
+         font-size: 18px;
+     }
+    .l5{
+        height: 40px;
+        padding: 5px 10px 5px 10px;
+        box-sizing: content-box;
+    }
+    .l6{
+        height: 40px;
+        padding: 5px 10px 5px 10px;
+        margin-right: calc(20% - 10px);
+        box-sizing: content-box;
+    }
+    a{
+      padding-top: 10px;
+    }
+    #big{
+      z-index: 1;
+      width: 100%;
+      position: fixed;
+      background-color: #f4511e;
+    }
+    #small{
+        display: none;
+    }
+    #pc{
+      display: inline-block;
+    }
+    #mobile {
+      display: none;
+    }
+}
+
+@media only screen and (min-width:880px) and (max-width:1199px){
+  .l4{
+      height: 40px;
+       margin-left: calc(10% - 20px);
+       padding: 12.5px 10px 5px 10px;
+       font-size: 18px;
+   }
+  .l5{
+      height: 40px;
+      padding: 5px 10px 5px 10px;
+      box-sizing: content-box;
+  }
+  .l6{
+      height: 40px;
+      padding: 5px 10px 5px 10px;
+      margin-right: calc(10% - 10px);
+  }
+  a{
+    padding-top: 2.5px;
+  }
+  #big{
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    background-color: #f4511e;
+  }
+  #small{
+      display: none;
+  }
+  #pc{
+    display: inline-block;
+  }
+  #mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width:880px) and (min-width:364px) {
+    .l5, .l6{
+        display: none;
+    }
+    #big{
+        display: none;
+    }
+   .l4{
+     float: left;
+     height: 40px;
+     padding: 5px 0px 5px 0px;
+    }
+    .l3{
+      float: right;
+      height: 40px;
+      padding: 5px 0px 5px 0px;
+    }
+
+    .out_container_h1{
+        width: 100%;
+        height: 100px;
+        text-align: center;
+        font-size: 45px;
+
+        padding-top: 10px;
+        padding-bottom: 0px;
+        box-sizing: border-box;
+    }
+    .out_container_p1{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        font-size: 21px;
+        font-weight: lighter;
+        line-height: 37.8px;
+        padding-top: 0px;
+        box-sizing: border-box;
+    }
+    .out_container_p2{
+        width: 100%;
+        height: 30px;
+        text-align: center;
+        font-size: 1rem;
+        padding-top: 20px;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .tb_style{
+      width: 44%;
+      height: 20px;
+      padding: 6px 12px;
+      font-size: 14px;
+      color: #555;
+      background-color: #fff;
+      background-image: none;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      position: relative;
+      right:-4px;
+    }
+    #pc{
+      display: none;
+    }
+    #mobile {
+      display: block;
+    }
+}

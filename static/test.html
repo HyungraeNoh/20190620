@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>SPA</title>
+        <link rel="stylesheet" href="./css/test.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+        <script>
+            /*************************************************************
+            * 게시판 만들기
+            * - 기능 정의 (5가지) + α
+            * 1) 작성하기 : 사용자에게 입력값을 받은 후 저장소에 남기기
+            * 2) 목록보기 : 저장소에 있는 데이터를 목록으로 화면에 표현하기
+            * 3) 자세히보기 : 목록중에 하나의 글을 선택한 내용만 화면에 표현하기
+            * 4) 수정하기 : 선택한 글의 내용을 수정하는 화면으로 표현하기 + 저장(1)
+            * 5) 삭제하기 : 선택한 글을 목록내용에서 빼고 + 저장
+            * 6) 검색하기 : 목록글에서 입력받은 키워드를 찾아서 화면 표현하기
+            ***************************************************************/
+            $(document).ready(function(){
+                var list = [];
+
+                if(location.search != ""){
+                    var param = location.search.replace("?","");
+//                    console.log(param);
+                    var params = param.split("&");
+//                    console.log(params);
+                    var row = {};
+                    for(var i=0; i<params.length; i++){
+                        var map = params[i].split("=");
+                        row[map[0]] = decodeURI(map[1]);
+                    }
+//                    console.log(row);
+
+                    if(localStorage.getItem("list") != null){
+                        list = JSON.parse(localStorage.getItem("list"));
+                    }
+
+                    list[list.length] = row;
+                    localStorage.setItem("list", JSON.stringify(list)); location.search = "";
+                }
+
+                $("li").click(function(){
+
+                    $("#contentsList").text(" 사용자 목록 : " + localStorage.getItem("list"));
+                });
+            });
+
+            var index = $("# li").index(this);
+
+//            index2 = index;
+            console.log(index, userList[index]);
+
+
+
+
+
+//                    localStorage.setItem("key", "value"); //입력(저장)
+//                    localStorage.getItem("key");          //읽기
+//                    localStorage.removeItem("key");       //삭제
+        </script>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#m1">목록</a></li>
+                <li><a href="test2.html">신규</a></li>
+            </ul>
+        </nav>
+        <section class="contents">
+            <div id="contentsList">
+            </div>
+        </section>
+        <footer></footer>
+    </body>
+</html>

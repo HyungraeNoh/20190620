@@ -1,0 +1,40 @@
+html{
+    height: 650px;
+}
+html, body{
+margin: 0;
+padding: 0;
+}
+.N_service {
+    width: 100%;    
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.N_Smain {
+    display: inline-block;
+/*    border: 1px solid black;*/
+    box-sizing: border-box;
+    align-content: center;
+    margin: auto;
+}
+
+.N_Scontainer div {
+    display: block;
+    margin: 20px 50px;
+    float: left;
+    font-size: 20px;
+    
+}
+.N_Scontainer::after {
+    clear: both;
+}
+.N_Scontainer div i {
+    margin-bottom: 20px;
+}
+.N_Scontainer div p{
+    color: gray;
+    font-size: 14px;
+    margin-top: 15px;
+}
+

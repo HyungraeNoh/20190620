@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+             html, body {height: 100%; padding: 0; margin: 0; color: black;}
+
+            .cover{
+                background-image: url('https://www.w3schools.com/w3images/parallax1.jpg');
+                /* 배경이미지 높이를 스크린 높이와 같이 정의 */
+                min-height: 100%;
+                /* 배경이미지 반복 사용 안함 정의 */
+                background-repeat: no-repeat;
+                /* 배경이미지 위치 중앙 정렬 정의 */
+                background-position: center;
+                /* 배경이미지 뷰속성 정의 (이미지 가로 세로 비율 유지) */
+                background-size: cover;
+                /* 배경이미지 스크롤 시 화면 고정 정의 */
+                background-attachment: fixed;
+                /* 배경이미지 투명도 정의 */
+                opacity: 0.7;
+                height: 100vh;
+                display: block;
+                width: 100%;
+
+            }
+            .cover_inner {
+                /*수직정렬 */
+                vertical-align: middle;
+                /*수평정렬*/
+                text-align: center;
+            }
+            .box {
+                background-color: black;
+                width: 100px;
+                /*위아래 여백 없이 가로 중앙에 배치*/
+                padding: 1rem 0;
+                color: white;
+                margin:   auto;
+                position: absolute;
+                left:0;
+                right: 0;
+                top: 40%;
+                bottom: auto;
+            }
+            /*버튼*/
+           	.btn {
+                padding: 15px 30px;
+                margin: 2px;
+                /*배경색 없음*/
+                background-color: transparent !important;
+                /*테두리 기본값*/
+                border: none;
+                color: black;
+                /*선으로 텍스트를 꾸밀 수 있게 해주는 속성*/
+                text-decoration: none;
+                font-size: 16px;
+                display: inline-block;
+                /*마우스커서*/
+                cursor: pointer;
+                transition-duration: 0.4s;
+                float:left;
+                opacity: 0.8;
+		      }
+		      .btn1:hover, .btn2:hover, .btn3:hover, .btn4:hover {
+                  background-color: #4169E1;
+			     color: white;
+		      }
+            .bgimg {background-image: url("https://ko.pic1.sayfamous.com/civilization-humanities/69_8250449190952.jpg");
+                min-height: 100%;
+                opacity: 0.8;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+            /*picture size*/
+            .psize {
+                    width: 200px;
+                    height: 150px;
+                    margin: 5px;
+                    border-radius: 15%;
+                    float: left;
+
+            }
+
+
+            /*text center class*/
+            .tcenter {text-align: center;}
+
+            /*picture page top, bottom*/
+            .ptop, .pbottom {display: table-row;}
+
+            /*picture center class*/
+            .pcenter {
+                display: table;
+                align-items: center;
+                margin-left: auto;
+                margin-right: auto;
+                clear: both;
+            }
+            /*picture hover(opacity)*/
+            .a:hover {opacity: 0.5;}
+            h3 {font-weight: 400; margin: 10px 0; font-size: 24px;}
+            img {max-width: 100%; height: auto;}
+            .content {max-width: 980px; margin: 0 auto;} /*고정넓이, 가운데 정렬*/
+            .center {text-align: center;}
+            .left {float: left;}
+            .right {float: right;}
+            input {overflow: visible; font: inherit;}
+            * {box-sizing: inherit;}
+            footer {opacity: 0.6; filter: alpha(opacity=50);color: #fff; background-color: #000; display: block;}
+            footer:hover {opacity: 1.0; filter: alpha(opacity=100);}
+            a {color: inherit; background-color: transparent;}
+
+            .container {padding: 0.01em 16px;}
+            .padding-64 {padding: 64px 16px;}
+            .padding-32 {padding: 32px 0;}
+            .padding-8 {padding: 0 8px; box-sizing: inherit;}
+            .margin-16 {margin: 16px 0;}
+            .margin-bottom {margin-bottom: 16px;}
+            .image {border-radius: 4px;}
+            .font {font-size: 18px;}
+            .input {padding: 8px; display: block; width: 100%; border: 1px solid #ccc;}
+            .button {padding: 8px 16px; font: inherit; display: inline-block;}
+            .gray {color: #000; background-color: #f1f1f1;}
+            .tothetop {text-decoration: none;}
+
+            .content{
+                max-width: 980px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .pd{
+                box-sizing: border-box;
+                padding: 10px;
+            }
+            .text_center{
+                text-align: center!important;
+            }
+            .rows{
+                overflow: hidden;
+            }
+            .cols{
+                float: left;
+                width: 50%;
+            }
+
+            .padding_64{
+                padding-top: 64px;
+                padding-bottom: 64px;
+            }
+            .sect{
+                margin-top: 16px;
+                margin-bottom: 16px;
+            }
+            .quarter{
+                float: left;
+                background-color: gray;
+                width: 25%;
+            }
+            .img{
+                max-width: 100%;
+                height: auto;
+            }
+            .out_bar{
+                color: #000;
+                background-color: #f1f1f1;
+            }
+            .in_bar{
+                color: white;
+                background-color: black;
+            }
+            .logobox{
+                background-color: aquamarine;
+                width: 400px;
+                text-align: center;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+            }
+            .b{
+                text-align: center;
+                position: absolute;
+                transform: translate(-50%,-50%);
+                top: 50%;
+                left: 50%;
+                color: white;
+            }
+            .a{
+                float: left;
+                width: 10%;
+                text-align: center;
+                padding: 8px 16px;
+            }
+            .img_cols{
+                width: 25%;
+                float: left;
+                box-sizing: border-box;
+                padding: 10px;
+
+            }
+
+
+            @media screen and (min-width: 501px) (max-width: 959px) {
+
+                .ptop, pbotttom {
+                    width: auto;
+                    height: auto;
+
+                }
+                .psize {
+                    width: 100%;
+                    height: 100%;
+                }
+                .pcenter {
+                    display: table;
+                    align-items: center;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding: 0 15%;
+                    clear: both;
+                }
+
+            }
+            /* 스마트폰 */
+            @media screen and (max-width : 500px) {
+                .ptop, .pbottom {
+                    width: 97%;
+                    height: 100%;
+                }
+                .psize {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        @media only screen and (max-device-width: 1600px) {
+                .bgimg-1, .bgimg-2, .bgimg-3 {
+                    background-attachment: scroll;
+                    min-height: 400px;
+                }
+                .content{
+                    max-width: 980px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+            @media only screen and (max-width: 1366px) {
+                .bgimg-1, .bgimg-2, .bgimg-3 {
+                    background-attachment: scroll;
+                    min-height: 400px;
+                }
+                .content{
+                    max-width: 758px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .quarter{
+                    float: left;
+                    background-color: gray;
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width: 768px) {
+                .bgimg-1, .bgimg-2, .bgimg-3 {
+                    background-attachment: scroll;
+                    min-height: 400px;
+                }
+                .content{
+                    max-width: 600px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .quarter{
+                    float: left;
+                    background-color: gray;
+                    width: 100%;
+                }
+                .hide{
+                    display: none;
+
+                }
+                .cols{
+                    width: 100%;
+                }
+            }
+
+            @media screen and (min-width:601px) {
+                .col3 {width: 33.33333%;}
+                .col6 {width: 66.66666%;}
+                .half {width: 49.99999%; float: left; padding: 0 8px; box-sizing: inherit;}
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 이남규 -->
+        <div class="cover">
+             <nav>
+                <button class="btn btn1">어</button>
+                <button class="btn btn2">렵</button>
+	            <button class="btn btn3">다</button>
+	            <button class="btn btn4">ㅜ</button>
+            </nav>
+            <div class="cover_inner">
+                <div class="box">최후의만찬</div>
+
+            </div>
+        </div>
+        <!-- 구기준 -->
+        <div class="content padding_64">
+            <h2 class="text_center">ABOUT ME</h2>
+            <h3 class="text_center"> <i>I love photocraphy</i> </h3>
+            <p>
+                "We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+            </p>
+
+            <div class="rows">
+                <div class="cols text_center pd">
+                    <p>
+                        <b>My Name </b>
+                    </p>
+                    <br>
+                    <img src="1.jpg" class="img" height="333" width="500">
+                </div>
+
+                <div class="cols pd hide">
+                    <p>
+                        Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <h3 class="text_center"> 
+                    Im really good at :
+                </h3>
+                <div>
+                    <div> Photography </div>
+                    <div class="out_bar">
+                        <div class="in_bar text_center" style="width: 90%"> 90%</div>
+                    </div>
+
+                </div>
+                <div>
+                    <div>Web Design</div>
+                    <div class="out_bar">
+                        <div class="in_bar text_center" style="width: 10%"> 10%</div>
+                    </div>
+                </div>
+                <div>
+                    <div> photo shop </div>
+                    <div class="out_bar">
+                        <div class="in_bar text_center" style="width: 90%"> 90%</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row text_center">
+            <div class="quarter pd">
+                <div> 14+ </div>
+                Partners
+            </div>
+            <div class="quarter pd">
+                <div> 55+ </div>
+                Projects Done
+            </div>
+            <div class="quarter pd" >
+                <div> 89+ </div>
+                Happy Clients
+            </div>
+            <div class="quarter pd">
+                <div> 150+ </div>
+                Mettings
+            </div>
+
+        </div>
+
+        <!-- 노형래 -->
+        <div class="bgimg" style="clear: both">
+            <div>
+                <h2 class="tcenter" style="color: white"><var> PORTFOLIO </var></h2>
+            </div>
+        </div>
+        <div>
+            <div class="tcenter pgrid" style="color: chocolate" >
+                <h2>Leonardo da Vinci</h2>
+                <em> A genius artist who represents Italy in the 15th century Renaissance period.<br> Move on the images to make them cloudy</em>
+            </div>
+            <div class="pcenter ptop">
+                <img src="photo/%EA%B7%B8%EB%A6%AC%EC%8A%A4%EB%8F%84%EC%9D%98%20%EC%84%B8%EB%A1%80.jpg" class="a psize" >
+                <img src="photo/%EB%8B%B4%EB%B9%84%EB%A5%BC%EC%95%88%EA%B3%A0%EC%9E%88%EB%8A%94%EC%97%AC%EC%9D%B8.jpg" class="a psize" >
+                <img src="photo/%EB%A0%88%EC%98%A4%EB%82%98%EB%A5%B4%EB%8F%84%20%EB%8B%A4%EB%B9%88%EC%B9%98.jpg" class="a psize" >
+                <img src="photo/%EB%AA%A8%EB%82%98%EB%A6%AC%EC%9E%90..jpg" class="a psize" >
+            </div>
+
+            <div class="pcenter pbottom">
+                <img src="photo/%EC%82%B4%EB%B0%94%ED%86%A0%EB%A5%B4%20%EB%AC%B8%EB%94%94.jpg" class="a psize ">
+                <img src="photo/%EC%84%B1%EB%85%80%EC%95%88%EB%82%98%EC%99%80%20%EC%84%B1%EB%AA%A8%EC%9E%90.jpg" class="a psize ">
+                <img src="photo/%EC%84%B1%EB%AA%A8%EC%99%80%20%EC%95%84%EA%B8%B0%EC%98%88%EC%88%98.jpg" class="a psize ">
+                <img src="photo/%EC%84%B8%EB%A1%80%EC%9A%94%ED%95%9C.jpg"  class="a psize ">
+            </div>
+            <button onclick="alert('Plz Let's me go!!')" style="margin-top: 40px; margin-bottom: 20px; padding: 20px" class="a pcenter">click Me!</button>
+        </div>
+
+        <!-- 김주화 -->
+
+        <div>
+            <section class="content padding-64">
+                <h3 class="center">WHERE I WORK</h3>
+                <p class="center">
+                    <em>I'd love your feedback!</em>
+                </p>
+                <div class="padding-32 margin-16">
+                    <div class="col3 left container">
+                        <img src="https://www.w3schools.com/w3images/map.jpg" class="image">
+                    </div>
+                    <div class="col6 margin-16 container">
+                        <div class="font">
+                            Chicago, US<br>
+                            Phone: +00 151515<br>
+                            Email: mail@mail.com<br>
+                        </div>
+                        <p>Swing by for a cup of coffee, or leave me a note:</p>
+                        <div class="padding-8"style="margin: 0 -16px 8px -16px">
+                            <div class="half">
+                                <input class="input" type="text" placeholder="Name">
+                            </div>
+                            <div class="half">
+                                <input class="input" type="text" placeholder="Email">
+                            </div>
+                        </div>
+                        <input class="input" type="text" placeholder="Message">
+                        <button class="right margin-16 button" type="submit">SEND MESSAGE</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer class="center padding-64 footer">
+            <!--맨위 주소 입력해야함-->
+            <a href="" class="button gray tothetop">To the top</a>
+            <div class="margin-16"></div>
+            <p>Powered by
+                <a href="https://www.w3schools.com/w3css/default.asp" title="w3.css" target="_blank">w3.css</a>
+            </p>
+        </footer>
+    </body>
+
+
+
+
+</html>
